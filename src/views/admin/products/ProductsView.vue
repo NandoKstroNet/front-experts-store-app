@@ -13,8 +13,8 @@
           <th class="px-6 py-4">Ações</th>
         </tr>
       </thead>
-      <tbody>
-        <tr v-for="product in productsStore.products.data" :key="product.id">
+      <tbody v-if="productsStore.products">
+        <tr v-for="product in productsStore.products?.data" :key="product.id">
           <td class="px-6 py-4">{{ product.id }}</td>
           <td class="px-6 py-4">{{ product.name }}</td>
           <td class="px-6 py-4">{{ product.price_float }}</td>
@@ -74,7 +74,7 @@
     <a
       @click.prevent="getProductsByPage(link.url)"
       :href="link.url"
-      v-for="link in productsStore.products.meta.links"
+      v-for="link in productsStore.products?.meta.links"
       v-show="link.url"
       v-html="link.label"
       :key="link.label"

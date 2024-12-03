@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="w-full flex justify-between">
-      <div id="sidebar" class="w-48 h-screen bg-gray-800 shadow">
+      <div id="sidebar" class="w-48 h-screen bg-gray-800 shadow fixed">
         <div class="block bg-black h-14 text-white pt-4 pl-4 font-bold">
           Admin Loja
         </div>
@@ -32,7 +32,7 @@
         </ul>
       </div>
 
-      <div id="content" class="bg-gray-300 w-screen">
+      <div id="content" class="bg-gray-300 w-screen ml-[187px]">
         <header class="w-full h-14 bg-black flex justify-end">
           <nav>
             <ul class="w-full">
@@ -48,7 +48,7 @@
           </nav>
         </header>
         <div class="p-8">
-          <div class="p-6 rounded shadow bg-white">
+          <div class="p-6 rounded shadow bg-white overflow-y-auto">
             <router-view></router-view>
           </div>
         </div>
